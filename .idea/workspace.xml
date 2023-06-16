@@ -9,7 +9,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1a11e50c-aa80-41c7-a78a-ee7e260f0c02" name="Changes" comment="-add JDBC connection (Postgre)">
+    <list default="true" id="1a11e50c-aa80-41c7-a78a-ee7e260f0c02" name="Changes" comment="-add PreparedStatement on DAO, add method save&lt; delete">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ru/malyushov/springcourse/dao/PersonDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/malyushov/springcourse/dao/PersonDAO.java" afterDir="false" />
     </list>
@@ -172,7 +172,7 @@
       <workItem from="1686675034168" duration="2101000" />
       <workItem from="1686722357348" duration="3773000" />
       <workItem from="1686816402129" duration="5101000" />
-      <workItem from="1686906060626" duration="6394000" />
+      <workItem from="1686906060626" duration="6722000" />
     </task>
     <task id="LOCAL-00001" summary="-spring crud app(Add controller,DAO, model)">
       <created>1686503967539</created>
@@ -209,7 +209,14 @@
       <option name="project" value="LOCAL" />
       <updated>1686911836693</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="-add PreparedStatement on DAO, add method save&lt; delete">
+      <created>1686917512629</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1686917512629</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -221,6 +228,7 @@
     <MESSAGE value="-add Patch and Delete method" />
     <MESSAGE value="-add @valid" />
     <MESSAGE value="-add JDBC connection (Postgre)" />
-    <option name="LAST_COMMIT_MESSAGE" value="-add JDBC connection (Postgre)" />
+    <MESSAGE value="-add PreparedStatement on DAO, add method save&lt; delete" />
+    <option name="LAST_COMMIT_MESSAGE" value="-add PreparedStatement on DAO, add method save&lt; delete" />
   </component>
 </project>
