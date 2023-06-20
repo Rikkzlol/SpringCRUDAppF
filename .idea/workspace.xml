@@ -9,11 +9,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1a11e50c-aa80-41c7-a78a-ee7e260f0c02" name="Changes" comment="-add Jdbc Template (fix code)">
+    <list default="true" id="1a11e50c-aa80-41c7-a78a-ee7e260f0c02" name="Changes" comment="-add properties file for database">
+      <change afterPath="$PROJECT_DIR$/src/main/java/ru/malyushov/springcourse/controllers/BatchController.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/resources/database.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/database.properties.origin" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/batch/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/malyushov/springcourse/config/SpringConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/malyushov/springcourse/config/SpringConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/malyushov/springcourse/dao/PersonDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/malyushov/springcourse/dao/PersonDAO.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -23,8 +24,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="HTML File" />
         <option value="Class" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -195,7 +196,7 @@
       <workItem from="1686906060626" duration="7641000" />
       <workItem from="1687028120410" duration="1787000" />
       <workItem from="1687029930067" duration="588000" />
-      <workItem from="1687070705876" duration="733000" />
+      <workItem from="1687070705876" duration="2792000" />
     </task>
     <task id="LOCAL-00001" summary="-spring crud app(Add controller,DAO, model)">
       <created>1686503967539</created>
@@ -260,7 +261,14 @@
       <option name="project" value="LOCAL" />
       <updated>1687070741626</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="-add properties file for database">
+      <created>1687071475166</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1687071475166</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -297,6 +305,7 @@
     <MESSAGE value="-add JDBC connection (Postgre)" />
     <MESSAGE value="-add PreparedStatement on DAO, add method save&lt; delete" />
     <MESSAGE value="-add Jdbc Template (fix code)" />
-    <option name="LAST_COMMIT_MESSAGE" value="-add Jdbc Template (fix code)" />
+    <MESSAGE value="-add properties file for database" />
+    <option name="LAST_COMMIT_MESSAGE" value="-add properties file for database" />
   </component>
 </project>
