@@ -3,7 +3,7 @@
   <database-model serializer="dbm" dbms="POSTGRES" family-id="POSTGRES" format-version="4.48">
     <root id="1">
       <DateStyle>dmy</DateStyle>
-      <IntrospectionStateNumber>756</IntrospectionStateNumber>
+      <IntrospectionStateNumber>763</IntrospectionStateNumber>
       <ServerVersion>15.3</ServerVersion>
       <StartupTime>1686908814</StartupTime>
       <TimeZones>true ACDT
@@ -801,7 +801,7 @@ false Zulu
 13183||10|C|G
 13183||-9223372036854775808|U|G
 13183||10|U|G</Grants>
-      <IntrospectionStateNumber>756</IntrospectionStateNumber>
+      <IntrospectionStateNumber>763</IntrospectionStateNumber>
       <ObjectId>16398</ObjectId>
       <OwnerName>postgres</OwnerName>
     </database>
@@ -4219,92 +4219,91 @@ false Zulu
     <schema id="262" parent="2" name="public">
       <Comment>standard public schema</Comment>
       <Current>1</Current>
-      <IntrospectionStateNumber>756</IntrospectionStateNumber>
+      <IntrospectionStateNumber>763</IntrospectionStateNumber>
       <ObjectId>2200</ObjectId>
       <StateNumber>518</StateNumber>
       <OwnerName>pg_database_owner</OwnerName>
     </schema>
-    <sequence id="263" parent="262" name="person2_id_seq">
+    <sequence id="263" parent="262" name="person_id_seq">
       <DasType>integer|0s</DasType>
-      <ObjectId>16412</ObjectId>
+      <ObjectId>16418</ObjectId>
       <SequenceIdentity>1(1)</SequenceIdentity>
       <StartValue>1</StartValue>
-      <StateNumber>755</StateNumber>
+      <StateNumber>762</StateNumber>
       <OwnerName>postgres</OwnerName>
     </sequence>
-    <sequence id="264" parent="262" name="person_id_seq">
-      <DasType>integer|0s</DasType>
-      <ObjectId>16405</ObjectId>
-      <SequenceIdentity>1(1)</SequenceIdentity>
-      <StartValue>1</StartValue>
-      <StateNumber>753</StateNumber>
-      <OwnerName>postgres</OwnerName>
-    </sequence>
-    <table id="265" parent="262" name="person">
-      <ObjectId>16406</ObjectId>
-      <StateNumber>753</StateNumber>
+    <table id="264" parent="262" name="person">
+      <ObjectId>16419</ObjectId>
+      <StateNumber>762</StateNumber>
       <AccessMethodId>2</AccessMethodId>
       <OwnerName>postgres</OwnerName>
     </table>
-    <table id="266" parent="262" name="person2">
-      <ObjectId>16413</ObjectId>
-      <StateNumber>755</StateNumber>
-      <AccessMethodId>2</AccessMethodId>
-      <OwnerName>postgres</OwnerName>
-    </table>
-    <column id="267" parent="265" name="id">
-      <DasType>integer|0s</DasType>
-      <DefaultExpression>nextval(&apos;person_id_seq&apos;::regclass)</DefaultExpression>
-      <NotNull>1</NotNull>
-      <Position>1</Position>
-      <StateNumber>753</StateNumber>
-      <SequenceId>16405</SequenceId>
-      <TypeId>23</TypeId>
-    </column>
-    <column id="268" parent="265" name="name">
-      <DasType>varchar|0s</DasType>
-      <Position>2</Position>
-      <StateNumber>753</StateNumber>
-      <TypeId>1043</TypeId>
-    </column>
-    <column id="269" parent="265" name="age">
-      <DasType>integer|0s</DasType>
-      <Position>3</Position>
-      <StateNumber>753</StateNumber>
-      <TypeId>23</TypeId>
-    </column>
-    <column id="270" parent="265" name="email">
-      <DasType>varchar|0s</DasType>
-      <Position>4</Position>
-      <StateNumber>753</StateNumber>
-      <TypeId>1043</TypeId>
-    </column>
-    <column id="271" parent="266" name="id">
+    <check id="265" parent="264" name="person_age_check">
+      <ColNames>age</ColNames>
+      <ObjectId>16422</ObjectId>
+      <Predicate>age &gt; 0</Predicate>
+      <StateNumber>762</StateNumber>
+    </check>
+    <column id="266" parent="264" name="id">
       <DasType>integer|0s</DasType>
       <IdentityKind>by-default</IdentityKind>
       <NotNull>1</NotNull>
       <Position>1</Position>
-      <StateNumber>755</StateNumber>
-      <SequenceId>16412</SequenceId>
+      <StateNumber>762</StateNumber>
+      <SequenceId>16418</SequenceId>
       <TypeId>23</TypeId>
     </column>
-    <column id="272" parent="266" name="name">
+    <column id="267" parent="264" name="name">
       <DasType>varchar|0s</DasType>
+      <NotNull>1</NotNull>
       <Position>2</Position>
-      <StateNumber>755</StateNumber>
+      <StateNumber>762</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="273" parent="266" name="age">
+    <column id="268" parent="264" name="age">
       <DasType>integer|0s</DasType>
       <Position>3</Position>
-      <StateNumber>755</StateNumber>
+      <StateNumber>762</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <column id="274" parent="266" name="email">
+    <column id="269" parent="264" name="email">
       <DasType>varchar|0s</DasType>
       <Position>4</Position>
-      <StateNumber>755</StateNumber>
+      <StateNumber>762</StateNumber>
       <TypeId>1043</TypeId>
     </column>
+    <index id="270" parent="264" name="person_pkey">
+      <ColNames>id</ColNames>
+      <NameSurrogate>1</NameSurrogate>
+      <ObjectId>16425</ObjectId>
+      <Primary>1</Primary>
+      <StateNumber>762</StateNumber>
+      <Unique>1</Unique>
+      <AccessMethodId>403</AccessMethodId>
+    </index>
+    <index id="271" parent="264" name="person_email_key">
+      <ColNames>email</ColNames>
+      <NameSurrogate>1</NameSurrogate>
+      <ObjectId>16427</ObjectId>
+      <StateNumber>762</StateNumber>
+      <Unique>1</Unique>
+      <AccessMethodId>403</AccessMethodId>
+      <CollationNames>default</CollationNames>
+      <CollationIds>100</CollationIds>
+      <CollationParentNames>pg_catalog</CollationParentNames>
+    </index>
+    <key id="272" parent="264" name="person_pkey">
+      <NameSurrogate>1</NameSurrogate>
+      <ObjectId>16426</ObjectId>
+      <Primary>1</Primary>
+      <StateNumber>762</StateNumber>
+      <UnderlyingIndexId>16425</UnderlyingIndexId>
+    </key>
+    <key id="273" parent="264" name="person_email_key">
+      <NameSurrogate>1</NameSurrogate>
+      <ObjectId>16428</ObjectId>
+      <StateNumber>762</StateNumber>
+      <UnderlyingIndexId>16427</UnderlyingIndexId>
+    </key>
   </database-model>
 </dataSource>
