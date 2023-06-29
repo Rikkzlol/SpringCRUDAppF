@@ -3,7 +3,7 @@
   <database-model serializer="dbm" dbms="POSTGRES" family-id="POSTGRES" format-version="4.48">
     <root id="1">
       <DateStyle>dmy</DateStyle>
-      <IntrospectionStateNumber>765</IntrospectionStateNumber>
+      <IntrospectionStateNumber>802</IntrospectionStateNumber>
       <ServerVersion>15.3</ServerVersion>
       <StartupTime>1686908814</StartupTime>
       <TimeZones>true ACDT
@@ -801,7 +801,7 @@ false Zulu
 13183||10|C|G
 13183||-9223372036854775808|U|G
 13183||10|U|G</Grants>
-      <IntrospectionStateNumber>765</IntrospectionStateNumber>
+      <IntrospectionStateNumber>802</IntrospectionStateNumber>
       <ObjectId>16398</ObjectId>
       <OwnerName>postgres</OwnerName>
     </database>
@@ -810,14 +810,14 @@ false Zulu
       <ObjectId>5</ObjectId>
       <OwnerName>postgres</OwnerName>
     </database>
-    <role id="4" parent="1" name="pg_database_owner">
+    <role id="4" parent="1" name="pg_checkpoint">
+      <ObjectId>4544</ObjectId>
+    </role>
+    <role id="5" parent="1" name="pg_database_owner">
       <ObjectId>6171</ObjectId>
     </role>
-    <role id="5" parent="1" name="pg_read_all_data">
-      <ObjectId>6181</ObjectId>
-    </role>
-    <role id="6" parent="1" name="pg_write_all_data">
-      <ObjectId>6182</ObjectId>
+    <role id="6" parent="1" name="pg_execute_server_program">
+      <ObjectId>4571</ObjectId>
     </role>
     <role id="7" parent="1" name="pg_monitor">
       <ObjectId>3373</ObjectId>
@@ -825,29 +825,29 @@ false Zulu
 3375
 3377</RoleGrants>
     </role>
-    <role id="8" parent="1" name="pg_read_all_settings">
+    <role id="8" parent="1" name="pg_read_all_data">
+      <ObjectId>6181</ObjectId>
+    </role>
+    <role id="9" parent="1" name="pg_read_all_settings">
       <ObjectId>3374</ObjectId>
     </role>
-    <role id="9" parent="1" name="pg_read_all_stats">
+    <role id="10" parent="1" name="pg_read_all_stats">
       <ObjectId>3375</ObjectId>
-    </role>
-    <role id="10" parent="1" name="pg_stat_scan_tables">
-      <ObjectId>3377</ObjectId>
     </role>
     <role id="11" parent="1" name="pg_read_server_files">
       <ObjectId>4569</ObjectId>
     </role>
-    <role id="12" parent="1" name="pg_write_server_files">
-      <ObjectId>4570</ObjectId>
-    </role>
-    <role id="13" parent="1" name="pg_execute_server_program">
-      <ObjectId>4571</ObjectId>
-    </role>
-    <role id="14" parent="1" name="pg_signal_backend">
+    <role id="12" parent="1" name="pg_signal_backend">
       <ObjectId>4200</ObjectId>
     </role>
-    <role id="15" parent="1" name="pg_checkpoint">
-      <ObjectId>4544</ObjectId>
+    <role id="13" parent="1" name="pg_stat_scan_tables">
+      <ObjectId>3377</ObjectId>
+    </role>
+    <role id="14" parent="1" name="pg_write_all_data">
+      <ObjectId>6182</ObjectId>
+    </role>
+    <role id="15" parent="1" name="pg_write_server_files">
+      <ObjectId>4570</ObjectId>
     </role>
     <role id="16" parent="1" name="postgres">
       <BypassRls>1</BypassRls>
@@ -4219,98 +4219,164 @@ false Zulu
     <schema id="262" parent="2" name="public">
       <Comment>standard public schema</Comment>
       <Current>1</Current>
-      <IntrospectionStateNumber>765</IntrospectionStateNumber>
+      <IntrospectionStateNumber>802</IntrospectionStateNumber>
       <ObjectId>2200</ObjectId>
       <StateNumber>518</StateNumber>
       <OwnerName>pg_database_owner</OwnerName>
     </schema>
-    <sequence id="263" parent="262" name="person_id_seq">
+    <sequence id="263" parent="262" name="book_book_id_seq">
       <DasType>integer|0s</DasType>
-      <ObjectId>16418</ObjectId>
-      <SequenceIdentity>1(1)</SequenceIdentity>
+      <ObjectId>16438</ObjectId>
+      <SequenceIdentity>1(2)</SequenceIdentity>
       <StartValue>1</StartValue>
-      <StateNumber>762</StateNumber>
+      <StateNumber>770</StateNumber>
       <OwnerName>postgres</OwnerName>
     </sequence>
-    <table id="264" parent="262" name="person">
-      <ObjectId>16419</ObjectId>
-      <StateNumber>764</StateNumber>
+    <sequence id="264" parent="262" name="person_person_id_seq">
+      <DasType>integer|0s</DasType>
+      <ObjectId>16429</ObjectId>
+      <SequenceIdentity>1(4)</SequenceIdentity>
+      <StartValue>1</StartValue>
+      <StateNumber>768</StateNumber>
+      <OwnerName>postgres</OwnerName>
+    </sequence>
+    <table id="265" parent="262" name="book">
+      <ObjectId>16439</ObjectId>
+      <StateNumber>798</StateNumber>
       <AccessMethodId>2</AccessMethodId>
       <OwnerName>postgres</OwnerName>
     </table>
-    <check id="265" parent="264" name="person_age_check">
-      <ColNames>age</ColNames>
-      <ObjectId>16422</ObjectId>
-      <Predicate>age &gt; 0</Predicate>
-      <StateNumber>762</StateNumber>
+    <table id="266" parent="262" name="person">
+      <ObjectId>16430</ObjectId>
+      <StateNumber>770</StateNumber>
+      <AccessMethodId>2</AccessMethodId>
+      <OwnerName>postgres</OwnerName>
+    </table>
+    <check id="267" parent="265" name="book_age_of_production_check">
+      <ColNames>ageOfProduction</ColNames>
+      <ObjectId>16442</ObjectId>
+      <Predicate>age_of_production &gt; 1900</Predicate>
+      <StateNumber>770</StateNumber>
     </check>
-    <column id="266" parent="264" name="id">
+    <column id="268" parent="265" name="book_id">
       <DasType>integer|0s</DasType>
       <IdentityKind>by-default</IdentityKind>
       <NotNull>1</NotNull>
       <Position>1</Position>
-      <StateNumber>762</StateNumber>
-      <SequenceId>16418</SequenceId>
+      <StateNumber>770</StateNumber>
+      <SequenceId>16438</SequenceId>
       <TypeId>23</TypeId>
     </column>
-    <column id="267" parent="264" name="name">
+    <column id="269" parent="265" name="person_id">
+      <DasType>integer|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+      <StateNumber>770</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="270" parent="265" name="name">
+      <DasType>varchar|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>3</Position>
+      <StateNumber>770</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <column id="271" parent="265" name="ageOfProduction">
+      <DasType>integer|0s</DasType>
+      <Position>4</Position>
+      <StateNumber>801</StateNumber>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="272" parent="265" name="author">
+      <DasType>varchar|0s</DasType>
+      <Position>5</Position>
+      <StateNumber>798</StateNumber>
+      <TypeId>1043</TypeId>
+    </column>
+    <foreign-key id="273" parent="265" name="book_person_id_fkey">
+      <ColNames>person_id</ColNames>
+      <NameSurrogate>1</NameSurrogate>
+      <ObjectId>16447</ObjectId>
+      <RefColNames>id</RefColNames>
+      <RefColPositions>1</RefColPositions>
+      <StateNumber>770</StateNumber>
+      <RefTableId>16430</RefTableId>
+      <RefTableName>person</RefTableName>
+      <RefTableKind>table</RefTableKind>
+    </foreign-key>
+    <index id="274" parent="265" name="book_pkey">
+      <ColNames>book_id</ColNames>
+      <NameSurrogate>1</NameSurrogate>
+      <ObjectId>16445</ObjectId>
+      <Primary>1</Primary>
+      <StateNumber>770</StateNumber>
+      <Unique>1</Unique>
+      <AccessMethodId>403</AccessMethodId>
+    </index>
+    <key id="275" parent="265" name="book_pkey">
+      <NameSurrogate>1</NameSurrogate>
+      <ObjectId>16446</ObjectId>
+      <Primary>1</Primary>
+      <StateNumber>770</StateNumber>
+      <UnderlyingIndexId>16445</UnderlyingIndexId>
+    </key>
+    <check id="276" parent="266" name="person_age_check">
+      <ColNames>age</ColNames>
+      <ObjectId>16433</ObjectId>
+      <Predicate>age &gt; 18</Predicate>
+      <StateNumber>768</StateNumber>
+    </check>
+    <column id="277" parent="266" name="id">
+      <DasType>integer|0s</DasType>
+      <IdentityKind>by-default</IdentityKind>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+      <StateNumber>778</StateNumber>
+      <SequenceId>16429</SequenceId>
+      <TypeId>23</TypeId>
+    </column>
+    <column id="278" parent="266" name="name">
       <DasType>varchar|0s</DasType>
       <NotNull>1</NotNull>
       <Position>2</Position>
-      <StateNumber>762</StateNumber>
+      <StateNumber>768</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="268" parent="264" name="age">
+    <column id="279" parent="266" name="age">
       <DasType>integer|0s</DasType>
       <Position>3</Position>
-      <StateNumber>762</StateNumber>
+      <StateNumber>768</StateNumber>
       <TypeId>23</TypeId>
     </column>
-    <column id="269" parent="264" name="email">
+    <column id="280" parent="266" name="email">
       <DasType>varchar|0s</DasType>
+      <NotNull>1</NotNull>
       <Position>4</Position>
-      <StateNumber>762</StateNumber>
+      <StateNumber>768</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <column id="270" parent="264" name="address">
+    <column id="281" parent="266" name="address">
       <DasType>varchar|0s</DasType>
       <NotNull>1</NotNull>
       <Position>5</Position>
-      <StateNumber>764</StateNumber>
+      <StateNumber>768</StateNumber>
       <TypeId>1043</TypeId>
     </column>
-    <index id="271" parent="264" name="person_pkey">
+    <index id="282" parent="266" name="person_pkey">
       <ColNames>id</ColNames>
       <NameSurrogate>1</NameSurrogate>
-      <ObjectId>16425</ObjectId>
+      <ObjectId>16436</ObjectId>
       <Primary>1</Primary>
-      <StateNumber>762</StateNumber>
+      <StateNumber>768</StateNumber>
       <Unique>1</Unique>
       <AccessMethodId>403</AccessMethodId>
     </index>
-    <index id="272" parent="264" name="person_email_key">
-      <ColNames>email</ColNames>
+    <key id="283" parent="266" name="person_pkey">
       <NameSurrogate>1</NameSurrogate>
-      <ObjectId>16427</ObjectId>
-      <StateNumber>762</StateNumber>
-      <Unique>1</Unique>
-      <AccessMethodId>403</AccessMethodId>
-      <CollationNames>default</CollationNames>
-      <CollationIds>100</CollationIds>
-      <CollationParentNames>pg_catalog</CollationParentNames>
-    </index>
-    <key id="273" parent="264" name="person_pkey">
-      <NameSurrogate>1</NameSurrogate>
-      <ObjectId>16426</ObjectId>
+      <ObjectId>16437</ObjectId>
       <Primary>1</Primary>
-      <StateNumber>762</StateNumber>
-      <UnderlyingIndexId>16425</UnderlyingIndexId>
-    </key>
-    <key id="274" parent="264" name="person_email_key">
-      <NameSurrogate>1</NameSurrogate>
-      <ObjectId>16428</ObjectId>
-      <StateNumber>762</StateNumber>
-      <UnderlyingIndexId>16427</UnderlyingIndexId>
+      <StateNumber>768</StateNumber>
+      <UnderlyingIndexId>16436</UnderlyingIndexId>
     </key>
   </database-model>
 </dataSource>

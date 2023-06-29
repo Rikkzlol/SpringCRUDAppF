@@ -29,6 +29,8 @@ public class PersonValidator implements Validator {
         if(personDAO.show(person.getEmail()).isPresent()){
             errors.rejectValue("email","This email is already taken");
         }
+        if (!Character.isUpperCase(person.getName().codePointAt(0)))
+            errors.rejectValue("name", "", "Name should start with a capital letter");
 
     }
 }
