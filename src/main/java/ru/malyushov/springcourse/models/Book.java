@@ -9,19 +9,19 @@ public class Book {
 
     @NotEmpty(message = "Name should not be empty")
     @Size(min = 2, max = 30, message ="Name should be between 2 and 30 characters")
-    private String name;
+    private String title;
     @NotEmpty(message = "Author should not be empty")
     @Size(min = 2, max = 30, message ="Name should be between 2 and 30 characters")
     private String author;
     @NotEmpty(message = "Year should not be empty")
     @Pattern(regexp = "\\d{4}", message = "Your should be in this format: year of production ****")
-    private int ageOfProduction;
+    private int year;
 
-    public Book(int id, String name, String author, int ageOfProduction) {
+    public Book(int id, String title, String author, int year) {
         this.id = id;
-        this.name = name;
+        this.title = title;
         this.author = author;
-        this.ageOfProduction = ageOfProduction;
+        this.year = year;
     }
 
     public Book() {
@@ -35,12 +35,12 @@ public class Book {
         this.id = id;
     }
 
-    public String getName() {
-        return name;
+    public String getTitle() {
+        return title;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setTitle(String title) {
+        this.title = title;
     }
 
     public String getAuthor() {
@@ -51,12 +51,12 @@ public class Book {
         this.author = author;
     }
 
-    public int getAgeOfProduction() {
-        return ageOfProduction;
+    public int getYear() {
+        return year;
     }
 
-    public void setAgeOfProduction(int ageOfProduction) {
-        this.ageOfProduction = ageOfProduction;
+    public void setYear(int year) {
+        this.year = year;
     }
 }
 

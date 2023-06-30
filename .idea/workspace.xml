@@ -9,22 +9,21 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1a11e50c-aa80-41c7-a78a-ee7e260f0c02" name="Changes" comment="-add Admincontroller and select option function">
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/malyushov/springcourse/controllers/BooksController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/malyushov/springcourse/dao/BookDAO.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/ru/malyushov/springcourse/models/Book.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/books/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/books/new.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/books/show.html" afterDir="false" />
+    <list default="true" id="1a11e50c-aa80-41c7-a78a-ee7e260f0c02" name="Changes" comment="-add new classes">
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/books/edit.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/5a15dd0d-491b-4e16-98cc-93d4a584a84c.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/5a15dd0d-491b-4e16-98cc-93d4a584a84c.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/dataSources/5a15dd0d-491b-4e16-98cc-93d4a584a84c/storage_v2/_src_/database/first_db.bWA53w/schema/public.abK9xQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/5a15dd0d-491b-4e16-98cc-93d4a584a84c/storage_v2/_src_/database/first_db.bWA53w/schema/public.abK9xQ.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ru/malyushov/springcourse/config/SpringConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/malyushov/springcourse/config/SpringConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/malyushov/springcourse/controllers/BooksController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/malyushov/springcourse/controllers/BooksController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ru/malyushov/springcourse/controllers/PeopleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/malyushov/springcourse/controllers/PeopleController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/malyushov/springcourse/dao/BookDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/malyushov/springcourse/dao/BookDAO.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ru/malyushov/springcourse/dao/PersonDAO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/malyushov/springcourse/dao/PersonDAO.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ru/malyushov/springcourse/models/Book.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/malyushov/springcourse/models/Book.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ru/malyushov/springcourse/util/PersonValidator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ru/malyushov/springcourse/util/PersonValidator.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/database.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/database.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/people/new.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/people/new.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/adminPage.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/adminPage.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/books/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/books/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/books/new.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/books/new.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/books/show.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/views/books/show.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -211,7 +210,8 @@
       <workItem from="1687677011960" duration="975000" />
       <workItem from="1687760069000" duration="3205000" />
       <workItem from="1688034209295" duration="2030000" />
-      <workItem from="1688036502972" duration="391000" />
+      <workItem from="1688036502972" duration="2775000" />
+      <workItem from="1688106955981" duration="4547000" />
     </task>
     <task id="LOCAL-00001" summary="-spring crud app(Add controller,DAO, model)">
       <created>1686503967539</created>
@@ -326,7 +326,15 @@
       <option name="project" value="LOCAL" />
       <updated>1687761821946</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="-add new classes">
+      <option name="closed" value="true" />
+      <created>1688037028160</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1688037028160</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -369,6 +377,7 @@
     <MESSAGE value="-add SpringValidator class, fix methods" />
     <MESSAGE value="-add @Pattern valodator with regexp" />
     <MESSAGE value="-add Admincontroller and select option function" />
-    <option name="LAST_COMMIT_MESSAGE" value="-add Admincontroller and select option function" />
+    <MESSAGE value="-add new classes" />
+    <option name="LAST_COMMIT_MESSAGE" value="-add new classes" />
   </component>
 </project>
