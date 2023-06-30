@@ -14,7 +14,6 @@ public class Book {
     @Size(min = 2, max = 30, message ="Name should be between 2 and 30 characters")
     private String author;
     @NotEmpty(message = "Year should not be empty")
-    @Pattern(regexp = "\\d{4}", message = "Your should be in this format: year of production ****")
     private int year;
 
     public Book(int id, String title, String author, int year) {

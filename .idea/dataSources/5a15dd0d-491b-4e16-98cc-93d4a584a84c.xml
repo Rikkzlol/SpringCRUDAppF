@@ -3,7 +3,7 @@
   <database-model serializer="dbm" dbms="POSTGRES" family-id="POSTGRES" format-version="4.48">
     <root id="1">
       <DateStyle>dmy</DateStyle>
-      <IntrospectionStateNumber>803</IntrospectionStateNumber>
+      <IntrospectionStateNumber>806</IntrospectionStateNumber>
       <ServerVersion>15.3</ServerVersion>
       <StartupTime>1686908814</StartupTime>
       <TimeZones>true ACDT
@@ -801,7 +801,7 @@ false Zulu
 13183||10|C|G
 13183||-9223372036854775808|U|G
 13183||10|U|G</Grants>
-      <IntrospectionStateNumber>803</IntrospectionStateNumber>
+      <IntrospectionStateNumber>806</IntrospectionStateNumber>
       <ObjectId>16398</ObjectId>
       <OwnerName>postgres</OwnerName>
     </database>
@@ -4219,7 +4219,7 @@ false Zulu
     <schema id="262" parent="2" name="public">
       <Comment>standard public schema</Comment>
       <Current>1</Current>
-      <IntrospectionStateNumber>803</IntrospectionStateNumber>
+      <IntrospectionStateNumber>806</IntrospectionStateNumber>
       <ObjectId>2200</ObjectId>
       <StateNumber>518</StateNumber>
       <OwnerName>pg_database_owner</OwnerName>
@@ -4258,12 +4258,12 @@ false Zulu
       <Predicate>age_of_production &gt; 1900</Predicate>
       <StateNumber>770</StateNumber>
     </check>
-    <column id="268" parent="265" name="book_id">
+    <column id="268" parent="265" name="id">
       <DasType>integer|0s</DasType>
       <IdentityKind>by-default</IdentityKind>
       <NotNull>1</NotNull>
       <Position>1</Position>
-      <StateNumber>770</StateNumber>
+      <StateNumber>805</StateNumber>
       <SequenceId>16438</SequenceId>
       <TypeId>23</TypeId>
     </column>
@@ -4305,7 +4305,7 @@ false Zulu
       <RefTableKind>table</RefTableKind>
     </foreign-key>
     <index id="274" parent="265" name="book_pkey">
-      <ColNames>book_id</ColNames>
+      <ColNames>id</ColNames>
       <NameSurrogate>1</NameSurrogate>
       <ObjectId>16445</ObjectId>
       <Primary>1</Primary>
@@ -4318,7 +4318,7 @@ false Zulu
       <ObjectId>16446</ObjectId>
       <Primary>1</Primary>
       <StateNumber>770</StateNumber>
-      <UnderlyingIndexId>16445</UnderlyingIndexId>
+      <UnderlyingIndexColNames>id</UnderlyingIndexColNames>
     </key>
     <check id="276" parent="266" name="person_age_check">
       <ColNames>age</ColNames>
